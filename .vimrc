@@ -32,7 +32,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmit-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'ngmy/vim-rubocop'
@@ -66,6 +66,7 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Enable detection, plugins, and indenting in one step
 filetype plugin indent on
@@ -107,7 +108,7 @@ let g:no_turbux_mappings = 1
 
 " Set color scheme
 set background=dark
-"colorscheme base16-railscasts
+"colorscheme solarized
 
 " Hide buffers instead of closing them
 set hidden
@@ -215,7 +216,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set nofoldenable
 
 " Set font
-set gfn=Inconsolata-dz\ 10
+set gfn=Inconsolata-dz\ 13
 
 " Disable bell
 set noerrorbells visualbell t_vb=
