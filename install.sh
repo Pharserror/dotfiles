@@ -12,3 +12,6 @@ ln -nfs $PWD/.tmux.conf $HOME/.tmux.conf
 ln -nfs $PWD/.tmux.conf.local $HOME/.tmux.conf.local
 ln -nfs $PWD/.vim $HOME/.vim
 ln -nfs $PWD/.vimrc $HOME/.vimrc
+mkdir $HOME/.config
+mkdir $HOME/.config/profanity
+ln -nfs $PWD/profrc $HOME/.config/profanity/profrc
