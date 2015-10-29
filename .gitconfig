@@ -1,6 +1,6 @@
 [user]
-	name = Marc Poris
-	email = marc.poris@gmail.com
+	name = You
+	email = you@website.com
 [alias]
 	st = status
 	vvv = branch -avv
@@ -13,4 +13,4 @@
 [merge]
 	conflictstyle = diff3
 [github]
-	user = marcp
+	user = username
