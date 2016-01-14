@@ -32,7 +32,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'mattn/emmit-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'ngmy/vim-rubocop'
@@ -67,6 +66,9 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'sjl/gundo.vim'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'simplefold'
 
 " Enable detection, plugins, and indenting in one step
 filetype plugin indent on
@@ -192,10 +194,10 @@ set laststatus=2
 
 " Editing settings
 
-" Convert tabs to 4 spaces
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+" Convert tabs to 2 spaces
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set expandtab
 
 " Allow backspacing over everything
@@ -207,7 +209,17 @@ set textwidth=0
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+
+" Add Tidy-HTML5 to syntastic
+let g:syntastic_html_tidy_exec = 'tidy5'
+let g:syntastic_handlebars_checkers=['w3']
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_ruby_checkers=['mri']
+" let g:syntastic_javascript_gjslint_args="--disable E,220 --max_line_length 120"
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 
 " Show current git branch
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
@@ -227,6 +239,12 @@ set noscrollbind
 
 " Split horizontal windows below current window
 set splitbelow
+
+" set a column at 80 to a different color so we know when to break
+set colorcolumn=80
+highlight colorcolumn ctermbg=13
+
+" ===MAPPINGS===
 
 " Easily edit the vimrc file with \ev
 nmap <leader>ev :e $MYVIMRC<CR>
@@ -265,6 +283,7 @@ nmap <leader>o ggVG
 
 " Map Gundo to \u
 nnoremap <leader>u :GundoToggle<CR>
+let g:gundo_right=1
 
 " Remap filetab controls
 map <C-l> :tabn<CR>
@@ -302,7 +321,7 @@ nnoremap <A-P> P'[v']=
 nnoremap <A-p> p'[v']=
 
 " map \f to display all lines with keyword under cursor and ask which one to jump to
-nmap <leader>f [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+nmap <leader>j [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
 " Yank/paste to the OS clipboard with \y and \p
 nmap <leader>y "+y
@@ -405,3 +424,6 @@ cmap <C-k> <Down>
 cmap <C-j> <Up>
 
 let g:gist_post_private = 1
+
+" Gundo mapping
+  nnoremap <C-w>G :GundoToggle<CR>
