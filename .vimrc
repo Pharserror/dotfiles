@@ -67,8 +67,8 @@ Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'sjl/gundo.vim'
-Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'simplefold'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " Enable detection, plugins, and indenting in one step
 filetype plugin indent on
@@ -202,10 +202,14 @@ set expandtab
 
 " Allow backspacing over everything
 set backspace=indent,eol,start
+set backspace=2
 
 " Word wrap
 set nowrap
 set textwidth=0
+
+" Numbering
+set number
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -220,6 +224,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
+let g:syntastic_loc_list_height = 1
 
 " Show current git branch
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
@@ -417,7 +422,10 @@ au Syntax * RainbowParenthesesLoadBraces
 
 let vimrubocop_rubocop_cmd = "bundle exec rubocop"
 
+" Tab spacing for ruby
 au FileType ruby set softtabstop=2 tabstop=2 shiftwidth=2
+" Tab spacing for handlebars
+au BufRead,BufNewFile *.hbs set softtabstop=2 tabstop=2 shiftwidth=2
 
 " ctrl-k, ctrl-j to go up/down in command history
 cmap <C-k> <Down>
@@ -426,4 +434,13 @@ cmap <C-j> <Up>
 let g:gist_post_private = 1
 
 " Gundo mapping
-  nnoremap <C-w>G :GundoToggle<CR>
+nnoremap <C-w>G :GundoToggle<CR>
+
+" Delete key going nuts
+:fixdel
+
+" Auto-open NERDTree on startup
+autocmd vimenter * NERDTree
+
+" set shell to sh for nerdtree-git-plugin
+set shell=sh
