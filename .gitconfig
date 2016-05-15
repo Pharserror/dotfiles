@@ -1,6 +1,7 @@
 [user]
-	name = Marc Poris
-	email = marc.poris@gmail.com
+	name = "Adam Lind"
+	email = sunboxnet@gmail.com
+	login = Pharserror
 [alias]
 	st = status
 	vvv = branch -avv
@@ -13,4 +14,4 @@
 [merge]
 	conflictstyle = diff3
 [github]
-	user = marcp
+	user = Pharserror
