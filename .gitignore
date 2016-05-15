@@ -1,3 +1,5 @@
 .vim/bundle
+.vim/.netrwhist
 .vim/undo
 .vim/view
+.gitconfig
