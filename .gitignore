@@ -3,3 +3,4 @@
 .vim/undo
 .vim/view
 .gitconfig
+.DS_Store

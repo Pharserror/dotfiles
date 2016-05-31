@@ -1,6 +1,6 @@
 [user]
-	name = You
-	email = you@website.com
+	name = "Adam Lind"
+	email = sunboxnet@gmail.com
 [alias]
 	st = status
 	vvv = branch -avv
@@ -13,4 +13,4 @@
 [merge]
 	conflictstyle = diff3
 [github]
-	user = username
+	user = Pharserror
