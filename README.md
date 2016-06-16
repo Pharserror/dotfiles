@@ -13,7 +13,7 @@ you will need Vundle and then of course there's tmux and powerline for tmux.
 
 ### Tmux
 Tmux is also my jam. The config binds Ctrl+a as its leader. Pretty much all you need to know is: Ctrl+a then,
-- q+<number>
-- h/H,j/J,k/K,l/L
-- c
-- <num>
+- `q+<number>`
+- `h/H,j/J,k/K,l/L`
+- `c`
+- `<num>`
