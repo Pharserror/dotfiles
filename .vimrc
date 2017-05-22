@@ -5,7 +5,7 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
 Bundle 'gmarik/vundle'
 
@@ -69,6 +69,8 @@ Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'sjl/gundo.vim'
 Bundle 'simplefold'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
+
+call vundle#end()
 
 " Enable detection, plugins, and indenting in one step
 filetype plugin indent on
