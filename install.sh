@@ -2,6 +2,7 @@
 
 PWD="$( cd "$( dirname "$0" )" && pwd )"
 
+ln -nfs $PWD/.aliases $HOME/.aliases
 ln -nfs $PWD/.bashrc $HOME/.bashrc
 ln -nfs $PWD/.dircolors $HOME/.dircolors
 ln -nfs $PWD/.fonts $HOME/.fonts
@@ -12,6 +13,4 @@ ln -nfs $PWD/.tmux.conf $HOME/.tmux.conf
 ln -nfs $PWD/.tmux.conf.local $HOME/.tmux.conf.local
 ln -nfs $PWD/.vim $HOME/.vim
 ln -nfs $PWD/.vimrc $HOME/.vimrc
-mkdir $HOME/.config
-mkdir $HOME/.config/profanity
-ln -nfs $PWD/profrc $HOME/.config/profanity/profrc
+ln -nfs $PWD/.zshrc $HOME/.zshrc
