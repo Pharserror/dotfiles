@@ -5,6 +5,7 @@ PWD="$( cd "$( dirname "$0" )" && pwd )"
 ln -nfs $PWD/.aliases $HOME/.aliases
 ln -nfs $PWD/.bashrc $HOME/.bashrc
 ln -nfs $PWD/.dircolors $HOME/.dircolors
+ln -nfs $PWD/.exports $HOME/.exports
 ln -nfs $PWD/.fonts $HOME/.fonts
 ln -nfs $PWD/.gitconfig $HOME/.gitconfig
 ln -nfs $PWD/.gitignore_global $HOME/.gitignore_global
