@@ -1,4 +1,4 @@
-# SHELL
+# SHELL - edit settings
 alias editaliases='vi ~/.aliases'
 alias editexports='vi ~/.exports'
 
@@ -14,13 +14,19 @@ alias gpo='git push origin'
 alias grm='git rm'
 alias gs='git status'
 
+# SHELL - ls
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias lldir='ls -la | grep ^d'
+
 # WEBPACK
 alias pack='webpack --config webpack.config.js'
 
 # POSTGRES
 alias pgstart='postgres -D /usr/local/var/postgres > /dev/null'
 
-# SHELL
+# SHELL - source
 alias resource='source ~/.zshrc'
 
 # RVM
