@@ -1,0 +1,42 @@
+# SHELL - edit settings
+alias editaliases='vi ~/.aliases'
+alias editexports='vi ~/.exports'
+
+# GIT
+alias ga='git add'
+alias gc='git checkout'
+alias gcm='git commit -m'
+alias gcp='git cherry-pick'
+alias gd='git diff'
+alias gm='git merge'
+alias gp='git pull'
+alias gpo='git push origin'
+alias grm='git rm'
+alias gs='git status'
+
+# SHELL - ls
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias lldir='ls -la | grep ^d'
+
+# WEBPACK
+alias pack='webpack --config webpack.config.js'
+
+# POSTGRES
+alias pgstart='postgres -D /usr/local/var/postgres > /dev/null'
+
+# SHELL - source
+alias resource='source ~/.zshrc'
+
+# RVM
+alias rgc='rvm gemset create'
+alias rgd='rvm gemset delete'
+alias rgl='rvm gemset list'
+alias rgu='rvm gemset use'
+alias rvc='rvm current'
+
+# VAGRANT
+alias vd='vagrant destroy'
+alias vs='vagrant ssh'
+alias vu='vagrant up'
