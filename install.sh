@@ -13,5 +13,8 @@ ln -nfs $PWD/.tmux.conf.local $HOME/.tmux.conf.local
 ln -nfs $PWD/.vim $HOME/.vim
 ln -nfs $PWD/.vimrc $HOME/.vimrc
 mkdir $HOME/.config
+mkdir $HOME/.config/fish
 mkdir $HOME/.config/profanity
 ln -nfs $PWD/profrc $HOME/.config/profanity/profrc
+# FISH - The Friendly Interactive SHell
+ln -nfs $PWD/config.fish $HOME/.config/fish/config.fish
