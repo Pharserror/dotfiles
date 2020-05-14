@@ -9,3 +9,4 @@ set -x PG_DATA_DIR "/var/lib/postgres/data"
 # Add all of your business-related or "secret" exports you don't want on GitHub
 # to this file
 source ~/.externalexports
+source ~/.exports.local
