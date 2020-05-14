@@ -1,18 +1,30 @@
+### Meta ###
+alias editconfig='vi ~/.config/fish/config.fish'
+
 # SHELL - edit settings
 alias editaliases='vi ~/.aliases'
 alias editexports='vi ~/.exports'
 
 # GIT
-alias ga='git add'
-alias gc='git checkout'
-alias gcm='git commit -m'
-alias gcp='git cherry-pick'
-alias gd='git diff'
-alias gm='git merge'
-alias gp='git pull'
-alias gpo='git push origin'
-alias grm='git rm'
-alias gs='git status'
+abbr ga='git add'
+abbr gb='git branch'
+abbr gc='git checkout'
+abbr gcm='git commit -m'
+abbr gcp='git cherry-pick'
+abbr gd='git diff'
+abbr gm='git merge'
+abbr gmm='if read_confirm; git merge master; end'
+abbr gp='git pull'
+abbr gpb='git pull (git config --get remote.origin.url) (git rev-parse --abbrev-ref HEAD)'
+abbr gpo='git push origin (git rev-parse --abbrev-ref HEAD)'
+abbr grh='git reset --hard HEAD~1'
+abbr grm='git rm'
+abbr gs='git status'
+abbr gum='git reset --merge ORIG_HEAD'
+
+function gbc
+  git branch $argv; git checkout $argv;
+end
 
 # SHELL - ls
 alias l='ls -CF'
@@ -24,19 +36,48 @@ alias lldir='ls -la | grep ^d'
 alias pack='webpack --config webpack.config.js'
 
 # POSTGRES
-alias pgstart='postgres -D /usr/local/var/postgres > /dev/null'
+alias pgstart='postgres -D $PG_DATA_DIR start > /dev/null'
 
-# SHELL - source
-alias resource='source ~/.zshrc'
+# FISH - source
+alias resource='source ~/source/dotfiles/config.fish'
+
+# NVM
+function nvm
+  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
+
+# UTILITIES
+function read_confirm
+  while true
+    read -l -P 'Do you want to continue? [y/N] ' confirm
+
+    switch $confirm
+      case Y y
+        return 0
+      case '' N n
+        return 1
+    end
+  end
+end
 
 # RVM
-alias rgc='rvm gemset create'
-alias rgd='rvm gemset delete'
-alias rgl='rvm gemset list'
-alias rgu='rvm gemset use'
-alias rvc='rvm current'
+abbr rv='rvm current and ruby --version'
+abbr rgc='rvm gemset create'
+abbr rgd='rvm gemset delete'
+abbr rgl='rvm gemset list'
+abbr rgu='rvm gemset use'
+abbr rvc='rvm current'
+abbr rvl='rvm list'
+abbr rvi='rvm install'
+abbr rvu='rvm use'
+
+# RAILS
+abbr sret='set -x RAILS_ENV test'
 
 # VAGRANT
 alias vd='vagrant destroy'
 alias vs='vagrant ssh'
 alias vu='vagrant up'
+
+# RSpec
+abbr ber='bundle exec rspec'

@@ -15,10 +15,12 @@ mkdir $HOME/.config/fish
 # mkdir $HOME/.config/profanity
 
 # BASH
-# ln -nfs $PWD/.aliases $HOME/.aliases
 # ln -nfs $PWD/.bashrc $HOME/.bashrc
 # ln -nfs $PWD/.dircolors $HOME/.dircolors
-# ln -nfs $PWD/.exports $HOME/.exports
+
+# Universal for all shells
+ln -nfs $PWD/.aliases $HOME/.aliases
+ln -nfs $PWD/.exports $HOME/.exports
 # ln -nfs $PWD/.fonts $HOME/.fonts
 
 # GIT
