@@ -36,19 +36,37 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
-     ;; auto-completion
-     ;; better-defaults
+     (auto-completion :variables
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-complete-with-key-sequence nil
+                      auto-completion-complete-with-key-sequence-delay 0.1
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-private-snippets-directory nil)
+     coffeescript
+     docker
      emacs-lisp
-     ;; git
-     ;; markdown
+     fzf
+     git
+     helm
+     html
+     javascript
+     shell
+     shell-scripts
+     sql
+     treemacs
+     typescript
+     version-control
+     yaml
+     markdown
+     multiple-cursors
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -309,6 +327,16 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (setq-default js2-basic-offset 2
+                css-indent-offset 2
+                js-indent-level 2
+                web-mode-markup-indent-offset 2
+                web-mode-css-indent-offset 2
+                web-mode-code-indent-offset 2
+                web-mode-attr-indent-offset 2
+                tsx-basic-offset 2
+                tsx-indent-level 2
+                typescript-indent-level 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
