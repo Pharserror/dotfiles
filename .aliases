@@ -6,21 +6,21 @@ alias editaliases='vi ~/.aliases'
 alias editexports='vi ~/.exports'
 
 # GIT
-abbr ga='git add'
-abbr gb='git branch'
-abbr gc='git checkout'
-abbr gcm='git commit -m'
-abbr gcp='git cherry-pick'
-abbr gd='git diff'
-abbr gm='git merge'
-abbr gmm='if read_confirm; git merge master; end'
-abbr gp='git pull'
-abbr gpb='git pull (git config --get remote.origin.url) (git rev-parse --abbrev-ref HEAD)'
-abbr gpo='git push origin (git rev-parse --abbrev-ref HEAD)'
-abbr grh='git reset --hard HEAD~1'
-abbr grm='git rm'
-abbr gs='git status'
-abbr gum='git reset --merge ORIG_HEAD'
+abbr --add ga 'git add'
+abbr --add gb 'git branch'
+abbr --add gc 'git checkout'
+abbr --add gcm 'git commit -m'
+abbr --add gcp 'git cherry-pick'
+abbr --add gd 'git diff'
+abbr --add gm 'git merge'
+abbr --add gmm 'if read_confirm; git merge master; end'
+abbr --add gp 'git pull'
+abbr --add gpb 'git pull (git config --get remote.origin.url) (git rev-parse --abbrev-ref HEAD)'
+abbr --add gpo 'git push origin (git rev-parse --abbrev-ref HEAD)'
+abbr --add grh 'git reset --hard HEAD~1'
+abbr --add grm 'git rm'
+abbr --add gs 'git status'
+abbr --add gum 'git reset --merge ORIG_HEAD'
 
 function gbc
   git branch $argv; git checkout $argv;
@@ -61,23 +61,28 @@ function read_confirm
 end
 
 # RVM
-abbr rv='rvm current and ruby --version'
-abbr rgc='rvm gemset create'
-abbr rgd='rvm gemset delete'
-abbr rgl='rvm gemset list'
-abbr rgu='rvm gemset use'
-abbr rvc='rvm current'
-abbr rvl='rvm list'
-abbr rvi='rvm install'
-abbr rvu='rvm use'
+abbr --add rv 'rvm current and ruby --version'
+abbr --add rgc 'rvm gemset create'
+abbr --add rgd 'rvm gemset delete'
+abbr --add rgl 'rvm gemset list'
+abbr --add rgu 'rvm gemset use'
+abbr --add rvc 'rvm current'
+abbr --add rvl 'rvm list'
+abbr --add rvi 'rvm install'
+abbr --add rvu 'rvm use'
 
 # RAILS
-abbr sret='set -x RAILS_ENV test'
+# abbr sret='set -x RAILS_ENV test'
 
 # VAGRANT
-alias vd='vagrant destroy'
-alias vs='vagrant ssh'
-alias vu='vagrant up'
+# alias vd='vagrant destroy'
+# alias vs='vagrant ssh'
+# alias vu='vagrant up'
 
 # RSpec
-abbr ber='bundle exec rspec'
+# abbr ber='bundle exec rspec'
+
+#PyEnv
+if command -v pyenv 1>/dev/null 2>&1
+  pyenv init - | source
+end

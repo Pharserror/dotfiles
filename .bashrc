@@ -36,6 +36,13 @@ fi
 case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
+# Check if we are connecting over a pts
+putty=$(tty)
+if [ $putty == "/dev/pts/0" ]; then
+  color_prompt=yes;
+  export TERM="xterm-256color";
+fi
+
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
