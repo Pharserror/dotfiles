@@ -37,11 +37,11 @@ ln -nfs $PWD/.tmux.conf.local $HOME/.tmux.conf.local
 # ln -nfs $PWD/profrc $HOME/.config/profanity/profrc
 
 # FISH - The Friendly Interactive SHell
-ln -nfs $PWD/config.fish $HOME/.config/fish/config.fish
+# ln -nfs $PWD/config.fish $HOME/.config/fish/config.fish
 
 # VIM - Vi IMproved
 # ln -nfs $PWD/.vim $HOME/.vim
 # ln -nfs $PWD/.vimrc $HOME/.vimrc
 
 # ZSHRC
-# ln -nfs $PWD/.zshrc $HOME/.zshrc
+ln -nfs $PWD/.zshrc $HOME/.zshrc

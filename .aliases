@@ -86,3 +86,10 @@ abbr --add rvu 'rvm use'
 if command -v pyenv 1>/dev/null 2>&1
   pyenv init - | source
 end
+
+# Batgrep
+abbr --add bg 'batgrep'
+
+# MongoDB
+abbr --add mongostart 'mongod --config /usr/local/etc/mongod.conf'
+abbr --add mongores 'mongorestore --uri="mongodb://127.0.0.1:27017/UITWO?ssl=false" --drop --db="UITWO" ~/source/UITWO'
