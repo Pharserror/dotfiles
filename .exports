@@ -1,10 +1,23 @@
 # Export any environement variables here
+# FISH
 set -x GIT_EDITOR "nvim"
 set -x HGEDITOR "nvim"
 set -x VISUAL "nvim"
 set -x EDITOR "emacs"
+# A potentially less invasive place to put postgres data
 # set -x PG_DATA_DIR "/usr/local/var/postgres"
-set -x PG_DATA_DIR "/var/lib/postgres/data"
+# The "default" place for the postgres data directory
+# set -x PG_DATA_DIR "/var/lib/postgres/data"
+# Another "default" postgres data dir
+set -x PG_DATA_DIR "/var/lib/pgsql/data"
+#
+# BASH
+# export GIT_EDITOR="nvim"
+# export HGEDITOR="nvim"
+# export VISUAL="nvim"
+# export EDITOR="emacs"
+# export PG_DATA_DIR="/var/lib/postgres/data"
+# export PG_DATA_DIR="/usr/local/var/postgres"
 
 # Add all of your business-related or "secret" exports you don't want on GitHub
 # to this file
