@@ -1,86 +1,84 @@
 ### Meta ###
-alias editconfig='vi ~/.config/fish/config.fish'
+alias editconfig="vi ~/.bashrc"
 
 # SHELL - edit settings
-alias editaliases='vi ~/.aliases'
-alias editexports='vi ~/.exports'
+alias editaliases="vi ~/.aliases"
+alias editexports="vi ~/.exports"
 
 # GIT
-abbr --add ga 'git add'
-abbr --add gb 'git branch'
-abbr --add gc 'git checkout'
-abbr --add gcm 'git commit -m'
-abbr --add gcp 'git cherry-pick'
-abbr --add gd 'git diff'
-abbr --add gm 'git merge'
-abbr --add gmm 'if read_confirm; git merge master; end'
-abbr --add gp 'git pull'
-abbr --add gpb 'git pull (git config --get remote.origin.url) (git rev-parse --abbrev-ref HEAD)'
-abbr --add gpo 'git push origin (git rev-parse --abbrev-ref HEAD)'
-abbr --add grh 'git reset --hard HEAD~1'
-abbr --add grm 'git rm'
-abbr --add gs 'git status'
-abbr --add gum 'git reset --merge ORIG_HEAD'
-
-function gbc
-  git branch $argv; git checkout $argv;
-end
+#
+## BASH/ZSH
+#
+alias ga="git add"
+alias gb="git branch"
+alias gc="git checkout"
+alias gcm="git commit -m"
+alias gcp="git cherry-pick"
+alias gd="git diff"
+alias gm="git merge"
+alias gmm="if read_confirm; git merge master; end"
+alias gp="git pull"
+alias gpb="git pull (git config --get remote.origin.url) (git rev-parse --abbrev-ref HEAD)"
+alias gpo="git push origin (git rev-parse --abbrev-ref HEAD)"
+alias grh="git reset --hard HEAD~1"
+alias grm="git rm"
+alias gs="git status"
+alias gum="git reset --merge ORIG_HEAD"
+alias gbc="git branch \1; git checkout \1;
 
 # SHELL - ls
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -alF'
-alias lldir='ls -la | grep ^d'
+alias l="ls -CF"
+alias la="ls -A"
+alias ll="ls -alF"
+alias lldir="ls -la | grep ^d"
 
 # WEBPACK
-alias pack='webpack --config webpack.config.js'
+alias pack="webpack --config webpack.config.js"
 
 # POSTGRES
-alias pgstart='postgres -D $PG_DATA_DIR start > /dev/null'
+alias pgstart="postgres -D $PG_DATA_DIR start > /dev/null"
 
-# FISH - source
-alias resource='source ~/source/dotfiles/config.fish'
+alias resource="source ~/.exports; source ~/.aliases"
 
 # NVM
-function nvm
-  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
-end
 
 # UTILITIES
-function read_confirm
-  while true
-    read -l -P 'Do you want to continue? [y/N] ' confirm
-
-    switch $confirm
-      case Y y
-        return 0
-      case '' N n
-        return 1
-    end
-  end
-end
+# function read_confirm
+#   while true
+#     read -l -P 'Do you want to continue? [y/N] ' confirm
+#
+#     switch $confirm
+#       case Y y
+#         return 0
+#       case '' N n
+#         return 1
+#     end
+#   end
+# end
 
 # RVM
-abbr --add rv 'rvm current and ruby --version'
-abbr --add rgc 'rvm gemset create'
-abbr --add rgd 'rvm gemset delete'
-abbr --add rgl 'rvm gemset list'
-abbr --add rgu 'rvm gemset use'
-abbr --add rvc 'rvm current'
-abbr --add rvl 'rvm list'
-abbr --add rvi 'rvm install'
-abbr --add rvu 'rvm use'
+#
+## BASH/ZSH
+alias rv="rvm current and ruby --version"
+alias rgc="rvm gemset create"
+alias rgd="rvm gemset delete"
+alias rgl="rvm gemset list"
+alias rgu="rvm gemset use"
+alias rvc="rvm current"
+alias rvl="rvm list"
+alias rvi="rvm install"
+alias rvu="rvm use"
 
 # RAILS
-# abbr sret='set -x RAILS_ENV test'
+alias sret="export RAILS_ENV='test'"
 
 # VAGRANT
-# alias vd='vagrant destroy'
-# alias vs='vagrant ssh'
-# alias vu='vagrant up'
+alias vd="vagrant destroy"
+alias vs="vagrant ssh"
+alias vu="vagrant up"
 
 # RSpec
-# abbr ber='bundle exec rspec'
+alias ber="bundle exec rspec"
 
 #PyEnv
 if command -v pyenv 1>/dev/null 2>&1
@@ -88,8 +86,11 @@ if command -v pyenv 1>/dev/null 2>&1
 end
 
 # Batgrep
-abbr --add bg 'batgrep'
+#
+## BASH
+#
+alias bg="batgrep"
 
 # MongoDB
-abbr --add mongostart 'mongod --config /usr/local/etc/mongod.conf'
-abbr --add mongores 'mongorestore --uri="mongodb://127.0.0.1:27017/UITWO?ssl=false" --drop --db="UITWO" ~/source/UITWO'
+alias mongostart="mongod --config /usr/local/etc/mongod.conf"
+alias mongores="mongorestore --uri='mongodb://$MONGO_DB_HOST:$MONGO_DB_PORT/$MONGO_DB_NAME?$MONGO_DB_PARAMS' --drop --db=$MONGO_DB_NAME $MONGO_DB_DIR"

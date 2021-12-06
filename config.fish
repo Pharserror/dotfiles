@@ -1,6 +1,6 @@
-rvm default
+# rvm default
 
-source ~/.aliases
-source ~/.exports
-source ~/.scripts
+source ~/.aliases.fish
+source ~/.exports.fish
+source ~/.scripts.fish
 # source ~/.asdf/asdf.fish

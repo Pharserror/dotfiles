@@ -52,6 +52,9 @@ values."
      helm
      html
      javascript
+     markdown
+     multiple-cursors
+     restclient
      shell
      shell-scripts
      sql
@@ -59,8 +62,6 @@ values."
      typescript
      version-control
      yaml
-     markdown
-     multiple-cursors
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
