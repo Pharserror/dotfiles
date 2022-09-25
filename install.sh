@@ -22,6 +22,11 @@ mkdir $HOME/.config/fish
 ln -nfs $PWD/.aliases $HOME/.aliases
 ln -nfs $PWD/.exports $HOME/.exports
 # ln -nfs $PWD/.fonts $HOME/.fonts
+#
+## FISH INSTALL
+#
+ln -nfs $PWD/.aliases.fish $HOME/.aliases.fish
+ln -nfs $PWD/.exports.fish $HOME/.exports.fish
 
 # GIT
 ln -nfs $PWD/.gitconfig $HOME/.gitconfig

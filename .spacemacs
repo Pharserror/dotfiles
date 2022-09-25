@@ -52,15 +52,17 @@ values."
      helm
      html
      javascript
+     markdown
+     multiple-cursors
+     restclient
      shell
      shell-scripts
      sql
+     tern
      treemacs
      typescript
      version-control
      yaml
-     markdown
-     multiple-cursors
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -337,6 +339,7 @@ you should place your code here."
                 tsx-basic-offset 2
                 tsx-indent-level 2
                 typescript-indent-level 2)
+  (javascript :variables javascript-backend 'tern)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
