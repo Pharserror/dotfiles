@@ -89,4 +89,9 @@ end
 #
 ## BASH
 #
-alias bg="batgrep"
+# alias bg="batgrep"
+
+#
+## FISH
+#
+abbr --add bg 'batgrep'
