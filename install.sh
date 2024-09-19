@@ -57,7 +57,7 @@ ln -nfs $pwd/.tmux.conf.local ~/.tmux.conf.local
 
 ## FISH - The Friendly Interactive SHell
 #
-# ln -nfs $PWD/config.fish $HOME/.config/fish/config.fish
+ln -nfs $PWD/config.fish $HOME/.config/fish/config.fish
 
 ## VIM - Vi IMproved
 #
