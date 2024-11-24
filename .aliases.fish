@@ -124,4 +124,4 @@ alias mongostart="mongod --config /usr/local/etc/mongod.conf"
 # LOCAL ALIASES
 #
 # Place any aliases/helpers here specific to your local dev setup
-source ~/.aliases.local.fish
+# source ~/.aliases.local.fish
