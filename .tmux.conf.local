@@ -2,16 +2,39 @@
 # puts user@hostname on the left of the window list (in a subtler color)
 # clearer (color-based) marker of the active window in that list
 # clearer current-pane contrast/coloring
-set -g status-bg colour233
-set -g status-fg black
+#
+# set -g status-bg colour233
+# set -g status-fg black
 # set -g status-left-bg colour233
 # set -g status-left-fg white
-set -g status-left-length 30 # allow more length, for longer hostnames
-set -g status-left '#30T  '
+# set -g status-left-length 30 # allow more length, for longer hostnames
+# set -g status-left '#30T  '
 # set -g window-status-current-bg black
 # set -g window-status-current-fg white
 # set -g status-right-fg white
 # set -g status-right-bg colour233
-set -g status-right '%H:%M, %a %h %e '
-# MacOS Fish Shell
-set-option -g default-shell /usr/local/bin/fish
+# set -g status-right '%H:%M, %a %h %e '
+#
+## Set Fish Shell as default
+#
+set-option -g default-shell /opt/homebrew/bin/fish
+#
+## Set Elvish Shell as default
+#
+# set-option -g default-shell /opt/homebrew/bin/elvish
+
+## TPM Plugins
+set -g @plugin 'thewtex/tmux-mem-cpu-load'
+set -g @plugin 'erikw/tmux-powerline'
+set -g @plugin 'dracula/tmux'
+# available plugins: battery, cpu-usage, git, gpu-usage, ram-usage, network, network-bandwidth, network-ping, attached-clients, network-vpn, weather, time, spotify-tui, kubernetes-context
+
+set -g @dracula-plugins "attached-clients ram-usage time"
+set -g @dracula-show-powerline true
+set -g @dracula-show-flags true
+# it can accept `session`, `smiley`, `window`, or any character.
+set -g @dracula-show-left-icon session
+set -g @dracula-border-contrast true
+# set -g @dracula-cpu-usage-label "C"
+set -g @dracula-ram-usage-label "RAM"
+set -g @dracula-military-time true
