@@ -17,11 +17,19 @@
 #
 ## Set Fish Shell as default
 #
-set-option -g default-shell /opt/homebrew/bin/fish
+# Homebrew Fish Shell
+# set-option -g default-shell /opt/homebrew/bin/fish
+#
+# Unix
+set-option -g default-shell /usr/local/bin/fish
 #
 ## Set Elvish Shell as default
 #
+# Homebrew
 # set-option -g default-shell /opt/homebrew/bin/elvish
+#
+# Unix
+# set-option -g default-shell /usr/local/bin/elvish
 
 ## TPM Plugins
 set -g @plugin 'thewtex/tmux-mem-cpu-load'

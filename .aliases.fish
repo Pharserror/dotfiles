@@ -45,9 +45,12 @@ alias pgstart="postgres -D $PG_DATA_DIR start > /dev/null"
 alias resource="source ~/source/dotfiles/config.fish"
 
 # NVM
-function nvm
-  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
-end
+#
+# Commenting this out in favor of asdf
+#
+# function nvm
+#   bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+# end
 
 # UTILITIES
 # function read_confirm
@@ -121,4 +124,4 @@ alias mongostart="mongod --config /usr/local/etc/mongod.conf"
 # LOCAL ALIASES
 #
 # Place any aliases/helpers here specific to your local dev setup
-source ~/.aliases.local.fish
+# source ~/.aliases.local.fish
