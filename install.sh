@@ -41,15 +41,15 @@ ln -nfs $PWD/.exports.fish $HOME/.exports.fish
 
 ## GIT
 #
-ln -nfs $pwd/.gitconfig ~/.gitconfig
-ln -nfs $pwd/.gitignore_global ~/.gitignore_global
+ln -nfs $PWD/.gitconfig ~/.gitconfig
+ln -nfs $PWD/.gitignore_global ~/.gitignore_global
 
 # ln -nfs $PWD/.inputrc $HOME/.inputrc
 
 ## TMUX - Terminal Multiplexer
 #
-ln -nfs $pwd/.tmux.conf ~/.tmux.conf
-ln -nfs $pwd/.tmux.conf.local ~/.tmux.conf.local
+ln -nfs $PWD/.tmux.conf $HOME/.tmux.conf
+ln -nfs $PWD/.tmux.conf.local $HOME/.tmux.conf.local
 
 ## Profanity - An Irssi clone for Jabber/XMPP
 #
