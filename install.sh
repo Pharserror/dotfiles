@@ -10,7 +10,7 @@ PWD="$( cd "$( dirname "$0" )" && pwd )"
 
 # CURRENT SETUP IS ELVISH SHELL - TMUX - GIT - EMACS
 # UNCOMMENT STUFF TO USE OTHER STUFF
-# mkdir -p ~/.config/elvish
+# mkdir -p $HOME/.config/elvish
 mkdir -p $HOME/.config/fish
 # mkdir -p $HOME/.config/profanity
 
@@ -24,7 +24,7 @@ mkdir -p $HOME/.config/fish
 # Commented out in favor of shell specific .aliases file like .aliases.fish
 # ln -nfs $PWD/.aliases $HOME/.aliases
 #
-# ln -nfs $PWD/.exports ~/.exports
+# ln -nfs $PWD/.exports $HOME/.exports
 # ln -nfs $PWD/.fonts $HOME/.fonts
 #
 ## FISH INSTALL
@@ -34,15 +34,15 @@ ln -nfs $PWD/.exports.fish $HOME/.exports.fish
 #
 ## ELVISH INSTALL
 #
-# ln -nfs $PWD/aliases.elv ~/.config/elvish/lib/aliases.elv
-# ln -nfs $PWD/exports.elv ~/.config/elvish/lib/exports.elv
-# ln -nfs $PWD/rc.elv ~/.config/elvish/rc.elv
+# ln -nfs $PWD/aliases.elv $HOME/.config/elvish/lib/aliases.elv
+# ln -nfs $PWD/exports.elv $HOME/.config/elvish/lib/exports.elv
+# ln -nfs $PWD/rc.elv $HOME/.config/elvish/rc.elv
 
 
 ## GIT
 #
-ln -nfs $PWD/.gitconfig ~/.gitconfig
-ln -nfs $PWD/.gitignore_global ~/.gitignore_global
+ln -nfs $PWD/.gitconfig $HOME/.gitconfig
+ln -nfs $PWD/.gitignore_global $HOME/.gitignore_global
 
 # ln -nfs $PWD/.inputrc $HOME/.inputrc
 
