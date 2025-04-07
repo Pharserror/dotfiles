@@ -48,8 +48,8 @@ ln -nfs $PWD/.gitignore_global ~/.gitignore_global
 
 ## TMUX - Terminal Multiplexer
 #
-ln -nfs $PWD/.tmux.conf ~/.tmux.conf
-ln -nfs $PWD/.tmux.conf.local ~/.tmux.conf.local
+ln -nfs $PWD/.tmux.conf $HOME/.tmux.conf
+ln -nfs $PWD/.tmux.conf.local $HOME/.tmux.conf.local
 
 ## Profanity - An Irssi clone for Jabber/XMPP
 #
