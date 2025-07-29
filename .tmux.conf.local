@@ -18,10 +18,10 @@
 ## Set Fish Shell as default
 #
 # Homebrew Fish Shell
-# set-option -g default-shell /opt/homebrew/bin/fish
+set-option -g default-shell /opt/homebrew/bin/fish
 #
 # Unix
-set-option -g default-shell /usr/local/bin/fish
+# set-option -g default-shell /usr/local/bin/fish
 #
 ## Set Elvish Shell as default
 #
@@ -34,6 +34,7 @@ set-option -g default-shell /usr/local/bin/fish
 ## TPM Plugins
 set -g @plugin 'thewtex/tmux-mem-cpu-load'
 set -g @plugin 'erikw/tmux-powerline'
+# set -g @plugin 'seebi/tmux-colors-solarized'
 set -g @plugin 'dracula/tmux'
 # available plugins: battery, cpu-usage, git, gpu-usage, ram-usage, network, network-bandwidth, network-ping, attached-clients, network-vpn, weather, time, spotify-tui, kubernetes-context
 

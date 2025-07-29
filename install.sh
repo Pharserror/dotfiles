@@ -11,7 +11,7 @@ PWD="$( cd "$( dirname "$0" )" && pwd )"
 # CURRENT SETUP IS ELVISH SHELL - TMUX - GIT - EMACS
 # UNCOMMENT STUFF TO USE OTHER STUFF
 # mkdir -p ~/.config/elvish
-mkdir $HOME/.config/fish
+mkdir -p $HOME/.config/fish
 # mkdir $HOME/.config/profanity
 
 ## BASH
